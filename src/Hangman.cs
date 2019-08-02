@@ -1,4 +1,5 @@
 ﻿using System;
+using HangmanCSharp.controller;
 using HangmanCSharp.view;
 
 namespace HangmanCSharp
@@ -7,7 +8,8 @@ namespace HangmanCSharp
     {
         static void Main(string[] args)
         {
-            Draw draw = null;
+            Controller controller = new Controller();
+            controller.run();
         }
     }
 }
