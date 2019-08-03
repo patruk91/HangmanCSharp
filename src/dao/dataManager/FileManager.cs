@@ -7,7 +7,7 @@ namespace HangmanCSharp.dao.dataManager
 {
     public class FileManager : IDataManager
     {
-        private string _filePath;
+        private readonly string _filePath;
 
         public FileManager(string filePath)
         {
@@ -20,7 +20,7 @@ namespace HangmanCSharp.dao.dataManager
             using (StreamReader streamReader = new StreamReader(_filePath))
             {
                 string line;
-                while((line = streamReader.ReadLine()) != null)
+                while ((line = streamReader.ReadLine()) != null)
                 {
                     string[] columns = line.Split(" | ");
                     string countryName = columns[0];
@@ -29,6 +29,7 @@ namespace HangmanCSharp.dao.dataManager
                     countries.Add(country);
                 }
             }
+
             return countries;
         }
 
@@ -38,6 +39,20 @@ namespace HangmanCSharp.dao.dataManager
             {
                 streamWriter.WriteLine(dataToSave);
             }
+        }
+
+        public List<string> ReadFile()
+        {
+            List<string> fileData = new List<string>();
+            using (StreamReader streamReader = new StreamReader(_filePath))
+            {
+                string line;
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    fileData.Add(line);
+                }
+            }
+            return fileData;
         }
     }
 }
