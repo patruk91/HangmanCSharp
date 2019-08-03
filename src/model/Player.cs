@@ -19,6 +19,18 @@ namespace HangmanCSharp.model
         public int Tries { get; private set; }
         public int Lives { get; private set; }
         public string Name { get; set; }
+        public List<string> GetGoodGuesses { get; }
+        public List<string> GetBadGuesses { get; }
+
+        public void AddGoodGuess(string guess)
+        {
+            GoodGuesses.Add(guess);
+        }
+
+        public void AddBadGuess(string guess)
+        {
+            BadGuesses.Add(guess);
+        }
 
         public void IncreaseTries()
         {
