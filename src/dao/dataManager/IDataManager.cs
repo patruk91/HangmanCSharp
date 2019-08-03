@@ -1,7 +1,10 @@
-﻿namespace HangmanCSharp.dao.dataManager
+﻿using System.Collections.Generic;
+using HangmanCSharp.model;
+
+namespace HangmanCSharp.dao.dataManager
 {
-    public class IDataManager
+    public interface IDataManager
     {
-        
+        List<Country> GetCountries();
     }
 }
