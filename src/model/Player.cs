@@ -20,6 +20,22 @@ namespace HangmanCSharp.model
         public int Lives { get; private set; }
         public string Name { get; set; }
 
-        
+        public void IncreaseTries()
+        {
+            Tries++;
+        }
+
+        public void DecreaseLives(int amount)
+        {
+            Lives -= amount;
+        }
+
+        public void ResetPlayerStatsToDefault()
+        {
+            Lives = 10;
+            Tries = 0;
+            BadGuesses.Clear();
+            GoodGuesses.Clear();
+        }
     }
 }
