@@ -31,5 +31,13 @@ namespace HangmanCSharp.dao.dataManager
             }
             return countries;
         }
+
+        public void SaveToFile(string pathToFile, string dataToSave)
+        {
+            using (StreamWriter streamWriter = new StreamWriter(pathToFile, true))
+            {
+                streamWriter.WriteLine(dataToSave);
+            }
+        }
     }
 }
