@@ -8,9 +8,9 @@ namespace HangmanCSharp.model
         private readonly DateTime _dateTime;
         private readonly int _time;
         private readonly int _tries;
-        private readonly int _capital;
+        private readonly string _capital;
 
-        public Score(string name, DateTime dateTime, int time, int tries, int capital)
+        public Score(string name, DateTime dateTime, int time, int tries, string capital)
         {
             _name = name;
             _dateTime = dateTime;
@@ -21,7 +21,7 @@ namespace HangmanCSharp.model
 
         public override string ToString()
         {
-            return $"{_name} | {_dateTime.Date} | {_time} | {_tries} | {_capital}";
+            return $"{_name} | {_dateTime:dd/MM/yyyy} | {_time} | {_tries} | {_capital}";
         }
     }
 }
