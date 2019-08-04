@@ -16,8 +16,7 @@ namespace HangmanCSharp.view
         public void DisplayHangman(int userLives)
         {
             List<string> hangmenDraws =
-                _fileManager.ReadFile(@"F:\C#\PROJECTS\HangmanCSharp\HangmanCSharp\
-                                        resources\draw_hangman.txt");
+                _fileManager.ReadFile(@"F:\C#\PROJECTS\HangmanCSharp\HangmanCSharp\resources\draw_hangman.txt");
             DrawHangman(userLives, hangmenDraws);
         }
 

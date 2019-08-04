@@ -11,8 +11,7 @@ namespace HangmanCSharp.dao.dataManager
         {
             List<Country> countries = new List<Country>();
             List<string> fileData = ReadFile(
-                @"F:\C#\PROJECTS\HangmanCSharp\HangmanCSharp\
-                resources\countries_and_capitals.txt");
+                @"F:\C#\PROJECTS\HangmanCSharp\HangmanCSharp\resources\countries_and_capitals.txt");
 
             foreach (string line in fileData)
             {
