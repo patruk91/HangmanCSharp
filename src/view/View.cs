@@ -8,5 +8,15 @@ namespace HangmanCSharp.view
         {
             Console.WriteLine(message);
         }
+
+        public void DisplayString(string message)
+        {
+            Console.Write(message);
+        }
+
+        public void DisplayError(string message)
+        {
+            Console.WriteLine($"Error: {message}!");
+        }
     }
 }
