@@ -4,8 +4,8 @@
     {
         public Country(string capitalName, string countryName)
         {
-            CapitalName = capitalName;
-            CountryName = countryName;
+            CapitalName = capitalName.ToUpper();
+            CountryName = countryName.ToUpper();
         }
 
         public string CapitalName { get; }
