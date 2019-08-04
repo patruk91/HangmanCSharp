@@ -22,12 +22,13 @@ namespace HangmanCSharp.model
 
         public string MakeDashWord(Player player, Country secretCountry)
         {
+            player.BadGuesses.ToString();
             string dashedWord = "";
             string capital = secretCountry.CapitalName.ToUpper();
             for (int i = 0; i < capital.Length; i++)
             {
                 string letter = char.ToString(capital[i]);
-                dashedWord += player.GetGoodGuesses.Contains(letter) ? $"{letter}" : letter == " " ? "   " : " _ ";
+                dashedWord += player.GoodGuesses.Contains(letter) ? $"{letter}" : letter == " " ? "   " : " _ ";
             }
 
             return dashedWord;
