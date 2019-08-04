@@ -19,7 +19,9 @@ namespace HangmanCSharp.time
 
         public int TotalTimeTakenInSeconds()
         {
-            return Convert.ToInt32(_stopwatch.ElapsedMilliseconds / 1000);
+            int result = Convert.ToInt32(_stopwatch.ElapsedMilliseconds / 1000);
+            _stopwatch.Reset();
+            return result;
         }
 
 
