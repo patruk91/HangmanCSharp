@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HangmanCSharp": {
+      "commandName": "Project",
+      "commandLineArgs": "-demo"
+    }
+  }
+}
